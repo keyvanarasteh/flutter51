@@ -47,15 +47,6 @@ Aşağıdaki gibi bilgileri toplayabiliriz:
 ###### Command Usage | Komut kullanımı
 	> git status
 
-## Git add
-
-Git clone is a command for ***downloading existing source code from a remote repository*** (like Github, for example).
-
-Git clone ***mevcut kaynak kodunu uzak bir depodan indirmek*** için bir komuttur. (Github gibi yerlerden).
-
-
-###### Command Usage | Komut kullanımı
-	> git add .
 
 ## Git commit
 
@@ -80,6 +71,17 @@ Değişikliklerimizi commit yaptiktan sonra yapmak istediğimiz sonraki şey, de
 ###### Command Usage | Komut kullanımı
 	> git push origin <branch>
 
+
+## Git add
+
+This _command_ updates the index using the current content found in the working tree, to prepare the content staged for the next commit.
+
+Dosyaları dizine ekler ve commit’lemeye hazır hale gelirler. “Git add .” komutu mevcut dizindeki tüm dosyaları dizine ekler. “Git add dosya.txt” komutu mevcut dizindeki “dosya.txt” dosyasını dizine ekler.
+
+
+###### Command Usage | Komut kullanımı
+	> git add .
+	
 ## Git pull
 The git pull command is used to ***get updates from the remote repo.***  
 This command is a combination of git fetch and git merge which means that, when we use git pull, it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).
