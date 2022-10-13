@@ -27,11 +27,30 @@ class MyApp extends StatelessWidget {
                 'https://i.redd.it/3f461bppquy21.png',
                 fit: BoxFit.contain,
               ),
-              Icon(Icons.qr_code),
-              Icon(Icons.r_mobiledata),
-              Icon(Icons.e_mobiledata_rounded),
-              Icon(Icons.wallet),
-              Icon(Icons.javascript),
+              SizedBox(
+                height: 45,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Icon(Icons.home, size: 32, color: Colors.grey),
+                  Icon(Icons.stacked_bar_chart, size: 32, color: Colors.grey),
+                  Icon(Icons.help, size: 32, color: Colors.grey),
+                  Icon(Icons.wallet, size: 32, color: Colors.grey),
+                ],
+              ),
+              SizedBox(
+                height: 45,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Icon(Icons.read_more, size: 32, color: Colors.grey),
+                  Icon(Icons.wallet_membership, size: 32, color: Colors.grey),
+                  Icon(Icons.radar, size: 32, color: Colors.grey),
+                  Icon(Icons.h_mobiledata, size: 32, color: Colors.grey),
+                ],
+              ),
             ],
           ),
         ),
