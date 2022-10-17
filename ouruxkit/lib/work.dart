@@ -7,7 +7,9 @@ class Work extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(); // BURASI SIZI BEKLIYOR
+    return Container(
+      child: Text('Hello World'),
+    ); // BURASI SIZI BEKLIYOR
   }
 }
 
