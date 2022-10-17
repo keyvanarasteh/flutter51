@@ -8,3 +8,7 @@ class Container1 extends StatelessWidget {
     return Container();
   }
 }
+
+// this example is simplest way to define container widget
+
+// Konteynerin en basit kodlamasi
