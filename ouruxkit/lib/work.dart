@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Work extends StatelessWidget {
@@ -8,11 +10,23 @@ class Work extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.blue),
-      child: const Text('Hello World'),
       width: double.infinity,
       height: double.infinity,
-    ); // BURASI SIZI BEKLIYOR
+      decoration: BoxDecoration(
+        color: Colors.pink,
+        image: DecorationImage(
+          fit: BoxFit.fitWidth,
+          image: AssetImage("assets/images/bg3.jpg"),
+        ),
+      ),
+      child: Text(
+        'Hello',
+        style: TextStyle(
+          fontSize: 38,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
   }
 }
 
