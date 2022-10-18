@@ -8,6 +8,7 @@ import 'package:ouruxkit/02_decoration/06_container6.dart';
 import 'package:ouruxkit/02_decoration/07_container7.dart';
 import 'package:ouruxkit/02_decoration/08_container8.dart';
 import 'package:ouruxkit/02_decoration/09_container9.dart';
+import 'package:ouruxkit/instagram.dart';
 import 'package:ouruxkit/work.dart';
 
 void main() {
@@ -26,9 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        body: Work(),
-      ),
+      home: Work(),
     );
   }
 }
