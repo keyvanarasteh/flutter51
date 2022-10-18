@@ -8,7 +8,10 @@ class Work extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Hello World'),
+      decoration: BoxDecoration(color: Colors.blue),
+      child: const Text('Hello World'),
+      width: double.infinity,
+      height: double.infinity,
     ); // BURASI SIZI BEKLIYOR
   }
 }
