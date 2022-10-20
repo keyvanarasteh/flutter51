@@ -5,8 +5,29 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Hello'),
+    return Column(
+      children: const [
+        Icon(
+          Icons.star,
+          color: Colors.black,
+          size: 48,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.black,
+          size: 128,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.black,
+          size: 48,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.black,
+          size: 128,
+        ),
+      ],
     );
   }
 }
