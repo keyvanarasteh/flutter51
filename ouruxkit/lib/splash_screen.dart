@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget {
         color: Colors.blue,
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage('assets/images/splash2.jpg'),
+          image: AssetImage('assets/images/splash_bg.jpg'),
         ),
       ),
       width: double.infinity,
