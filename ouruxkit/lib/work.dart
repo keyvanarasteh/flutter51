@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class Work extends StatelessWidget {
@@ -7,7 +9,16 @@ class Work extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(); // BURASI SIZI BEKLIYOR
+    return Container(
+      child: Text("key1 arasteh",
+      style: TextStyle(fontSize: 50, color: Colors.green)
+      ),
+      decoration: BoxDecoration(
+        color: Colors.orange,
+    
+      ),
+    );
+     // BURASI SIZI BEKLIYOR
   }
 }
 
