@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ouruxkit/home_screen.dart';
+import 'package:ouruxkit/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,104 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Ana Sayfa"),
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
         ),
-        body: Column(
-          children: [
-            Image.network(
-              'https://i.redd.it/3f461bppquy21.png',
-              fit: BoxFit.contain,
-            ),
-            const SizedBox(
-              height: 45,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.home, size: 32, color: Colors.grey),
-                Icon(Icons.stacked_bar_chart, size: 32, color: Colors.grey),
-                Icon(Icons.help, size: 32, color: Colors.grey),
-                Icon(Icons.wallet, size: 32, color: Colors.grey),
-              ],
-            ),
-            SizedBox(
-              height: 45,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.read_more, size: 32, color: Colors.grey),
-                Icon(Icons.wallet_membership, size: 32, color: Colors.grey),
-                Icon(Icons.radar, size: 32, color: Colors.grey),
-                Icon(Icons.h_mobiledata, size: 32, color: Colors.grey),
-              ],
-            ),
-            SizedBox(
-              height: 45,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () => {},
-                  child: Row(
-                    children: [
-                      Icon(Icons.login),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text("Giriş Yap"),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                ElevatedButton(
-                  onPressed: () => {},
-                  child: Row(
-                    children: [
-                      Icon(Icons.add),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text("Üye ol"),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-        drawer: Drawer(
-          child: Text('Menu'),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Business',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              label: 'School',
-            ),
-          ],
-          currentIndex: 0,
-          selectedItemColor: Colors.amber[800],
-        ),
-      ),
-    );
+        home: Scaffold(
+          body: HomeScreen(),
+        ));
   }
 }
