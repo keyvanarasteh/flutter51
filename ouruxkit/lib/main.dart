@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ouruxkit/BenimKutum.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          body: Container(),
+          body: BenimKutum(),
         ));
   }
 }
