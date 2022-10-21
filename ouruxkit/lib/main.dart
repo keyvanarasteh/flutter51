@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ouruxkit/BenimKutum.dart';
+import 'package:ouruxkit/AnaEkran.dart';
+import 'package:ouruxkit/SplashScreen2.dart';
+import 'package:ouruxkit/backup/home_screen.dart';
+import 'package:ouruxkit/backup/instagram.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          body: BenimKutum(),
+          body: AnaEkran(),
         ));
   }
 }
