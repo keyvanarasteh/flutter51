@@ -81,23 +81,23 @@ flutter:
         - asset: assets/fonts/OpenSans-Regular.ttf
         - asset: assets/fonts/OpenSans-Italic.ttf
           style: italic
-        - asset: fonts/OpenSans-Bold.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
           weight: 700
-        - asset: fonts/OpenSans-BoldItalic.ttf
+        - asset: assets/fonts/OpenSans-BoldItalic.ttf
           style: italic
           weight: 700
-        - asset: fonts/OpenSans-SemiBold.ttf
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
           weight: 800
-        - asset: fonts/OpenSans-SemiBoldItalic.ttf
+        - asset: assets/fonts/OpenSans-SemiBoldItalic.ttf
           style: italic
           weight: 800
-        - asset: fonts/OpenSans-ExtraBold.ttf
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
           weight: 900
-        - asset: fonts/OpenSans-ExtraBoldItalic.ttf
+        - asset: assets/fonts/OpenSans-ExtraBoldItalic.ttf
           style: italic
           weight: 900
-        - asset: fonts/OpenSans-Light.ttf
+        - asset: assets/fonts/OpenSans-Light.ttf
           weight: 300
-        - asset: fonts/OpenSans-LightItalic.ttf
+        - asset: assets/fonts/OpenSans-LightItalic.ttf
           style: italic
           weight: 300
