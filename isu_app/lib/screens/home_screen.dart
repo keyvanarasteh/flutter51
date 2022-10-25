@@ -48,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
+          // Heading Title
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Text(
@@ -59,6 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           SizedBox(height: 25),
+          // Search Box
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: TextField(
@@ -75,13 +77,50 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           SizedBox(height: 25),
+          // Horizontal Scroll List
+          Container(
+              height: 50,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  ProductCategory(
+                    categoryTitle: 'Cappuccino',
+                    isSelected: true,
+                  ),
+                  ProductCategory(categoryTitle: 'Espresso'),
+                  ProductCategory(categoryTitle: 'Latte'),
+                  ProductCategory(categoryTitle: 'Flat White'),
+                ],
+              )),
+          // Horizontal Product List
           Expanded(
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                CoffeeItem(),
-                CoffeeItem(),
-                CoffeeItem(),
+                ProductItem(
+                  productName: 'Cappuccino',
+                  productDescription: 'Laktozsuz Sutle',
+                  productImage: 'assets/images/cappuccino.jpg',
+                  productPrice: '\$4.00',
+                ),
+                ProductItem(
+                  productName: 'Espresso',
+                  productDescription: 'Single Shot',
+                  productImage: 'assets/images/espresso.jpg',
+                  productPrice: '\$6.00',
+                ),
+                ProductItem(
+                  productName: 'Latte',
+                  productDescription: 'Single Shot Espresso',
+                  productImage: 'assets/images/latte.jpg',
+                  productPrice: '\$12.00',
+                ),
+                ProductItem(
+                  productName: 'Milk',
+                  productDescription: 'Sade Sut',
+                  productImage: 'assets/images/milk.jpg',
+                  productPrice: '\$2.00',
+                ),
               ],
             ),
           ),
@@ -91,9 +130,42 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class CoffeeItem extends StatelessWidget {
-  const CoffeeItem({
+class ProductCategory extends StatelessWidget {
+  final String categoryTitle;
+  final bool isSelected;
+
+  const ProductCategory(
+      {Key? key, required this.categoryTitle, this.isSelected = false})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 25.0),
+      child: Text(
+        categoryTitle,
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: isSelected ? Colors.orange : Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+class ProductItem extends StatelessWidget {
+  final String productName;
+  final String productImage;
+  final String productDescription;
+  final String productPrice;
+
+  const ProductItem({
     Key? key,
+    this.productName = '',
+    this.productDescription = '',
+    this.productPrice = '',
+    this.productImage = 'assets/images/latte.jpg',
   }) : super(key: key);
 
   @override
@@ -113,7 +185,7 @@ class CoffeeItem extends StatelessWidget {
             // Product Image
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset('assets/images/latte.jpg'),
+              child: Image.asset(productImage),
             ),
             // Product Name
             Padding(
@@ -125,7 +197,7 @@ class CoffeeItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Latte',
+                    productName,
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -133,7 +205,7 @@ class CoffeeItem extends StatelessWidget {
                   SizedBox(height: 4),
                   // Product Description
                   Text(
-                    'Laktozsuz Sutle..',
+                    productDescription,
                     style: TextStyle(
                       color: Colors.grey.shade700,
                     ),
@@ -147,7 +219,7 @@ class CoffeeItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('\$4.00'),
+                  Text(productPrice),
                   Container(
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
