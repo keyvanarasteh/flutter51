@@ -101,3 +101,6 @@ flutter:
         - asset: assets/fonts/OpenSans-LightItalic.ttf
           style: italic
           weight: 300
+    - family: BebasNeue
+      fonts:
+        - asset: assets/fonts/BebasNeue-Regular.ttf
