@@ -101,12 +101,12 @@ class CoffeeItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Container(
-        width: 200,
-        decoration: BoxDecoration(
-          color: Colors.black54,
-          borderRadius: BorderRadius.all(Radius.circular(12)),
-        ),
-      ),
+          width: 200,
+          decoration: BoxDecoration(
+            color: Colors.black54,
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+          ),
+          child: Image.asset('assets/images/latte.jpg')),
     );
   }
 }
