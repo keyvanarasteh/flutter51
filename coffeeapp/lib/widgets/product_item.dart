@@ -4,8 +4,19 @@
 import 'package:flutter/material.dart';
 
 class ProductItem extends StatelessWidget {
+
+  final String productName;
+  final String productDescription;
+  final String productPrice;
+  final String productImage;
+
+
   const ProductItem({
     Key? key,
+    required this.productName,
+    required this.productDescription,
+    required this.productImage,
+    required this.productPrice,
   }) : super(key: key);
 
   @override
@@ -34,7 +45,7 @@ class ProductItem extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(32),
-                child: Image.asset('assets/images/latte.jpg')
+                child: Image.asset(productImage)
               ),
             ),
             // Product Name
@@ -44,7 +55,7 @@ class ProductItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Latte',
+                    productName,
                     style: TextStyle(
                       fontWeight: FontWeight.w300,
                       fontSize: 19,
@@ -53,7 +64,7 @@ class ProductItem extends StatelessWidget {
                   SizedBox(height: 5),
                   // Product Description
                   Text(
-                    'Laktozsuz sutle',
+                    productDescription,
                     style: TextStyle(
                       color: Colors.grey.shade700,
                     ),
@@ -78,7 +89,7 @@ class ProductItem extends StatelessWidget {
                         color: Colors.orange,
 
                       ),
-                      Text("4.00"),
+                      Text(productPrice),
                     ],
                   ),
                   Container(

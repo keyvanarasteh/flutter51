@@ -105,9 +105,24 @@ class _CoffeeHomeScreenState extends State<CoffeeHomeScreen> {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                ProductItem(),
-                ProductItem(),
-                ProductItem(),
+                ProductItem(
+                  productName: "Cappuccino",
+                  productImage: "assets/images/cappuccino.jpg",
+                  productPrice: "4.00",
+                  productDescription: "Made with milk",
+                ),
+                ProductItem(
+                  productName: "Latte",
+                  productImage: "assets/images/latte.jpg",
+                  productPrice: "12.00",
+                  productDescription: "Made with milk",
+                ),
+                ProductItem(
+                  productName: "Cappuccino",
+                  productImage: "assets/images/cappuccino.jpg",
+                  productPrice: "4.00",
+                  productDescription: "Made with milk",
+                ),
               ],
             ),
           )
