@@ -1,3 +1,4 @@
+import 'package:coffeeapp/screens/coffee_home.dart';
 import 'package:coffeeapp/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,10 +16,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
+        primarySwatch: Colors.orange,
         fontFamily: 'OpenSans',
       ),
-      home: HomeScreen(),
+      home: CoffeeHomeScreen(),
     );
   }
 }
