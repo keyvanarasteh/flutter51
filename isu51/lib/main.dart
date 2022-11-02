@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:isu51/screens/coffee_home.dart';
 import 'package:isu51/screens/home_screen.dart';
+import 'package:isu51/screens/tab_screen.dart';
+import 'package:isu51/themes/themes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +17,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.orange,
-        fontFamily: 'OpenSans',
-      ),
-      home: CoffeeHomeScreen(),
+      themeMode: ThemeMode.system,
+      theme: Themes.lightTheme,
+      darkTheme: Themes.darkTheme,
+      // home: CoffeeHomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/coffee':(context) => CoffeeHomeScreen(),
+        '/tab':(context) => TabScreen(),
+      },
     );
   }
 }

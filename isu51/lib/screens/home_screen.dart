@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:isu51/widgets/menu_element.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -39,6 +40,28 @@ class _HomeScreenState extends State<HomeScreen> {
             ElevatedButton(onPressed: ()=>{}, child: Text('Hello')),
             ElevatedButton(onPressed: ()=>{}, child: Text('Hello World')),
             ElevatedButton(onPressed: ()=>{}, child: Text('Hello Dear Students')),
+
+            SizedBox(height: 30,),
+
+
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/coffee');
+              } , child: Text('Coffee  Screen'),
+            ),   
+            SizedBox(height: 30,),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/tab');
+              } , child: Text('Tab Screen'),
+            ), 
+            SizedBox(height: 30,),
+            Text('Google  Fonts Testt...',
+              style: GoogleFonts.trispace(
+                fontSize: 38,
+              ),
+            ), 
           ],
         ),
       ),

@@ -7,13 +7,61 @@ import '../widgets/menu_element.dart';
 import '../widgets/product_item.dart';
 
 class CoffeeHomeScreen extends StatefulWidget {
+
+  
   const CoffeeHomeScreen({super.key});
 
   @override
   State<CoffeeHomeScreen> createState() => _CoffeeHomeScreenState();
+
 }
 
 class _CoffeeHomeScreenState extends State<CoffeeHomeScreen> {
+
+  var urunler = [
+    {
+      'title': "Latte",
+      'description': "Made by milk",
+      'image': 'assets/images/latte.jpg',
+      'price': '4.00',
+    },
+    {
+      'title': "Espresso",
+      'description': "Made by milk",
+      'image': 'assets/images/espresso.jpg',
+      'price': '5.00',
+    },
+    {
+      'title': "Cappuccino",
+      'description': "Made by milk",
+      'image': 'assets/images/cappuccino.jpg',
+      'price': '12.00',
+    },
+    {
+      'title': "Cappuccino",
+      'description': "Made by milk",
+      'image': 'assets/images/cappuccino.jpg',
+      'price': '8.00',
+    },
+  ];
+
+  List<Widget> buildList() {
+
+    return urunler.where((element) {
+      var price = double.parse(element['price']!);
+      if(price >= 6) return true;
+      else return false;
+    }).map((e) {
+      return ProductItem(
+        title: e['title']!,
+        description: e['description']!,
+        image: e['image']!,
+        price: e['price']!,
+      );
+    }).toList();
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -164,32 +212,7 @@ class _CoffeeHomeScreenState extends State<CoffeeHomeScreen> {
               child: Expanded(
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: [
-                    ProductItem(
-                      title: "Latte",
-                      description: "Made by milk",
-                      image: 'assets/images/latte.jpg',
-                      price: '4.00',
-                    ),
-                    ProductItem(
-                      title: "Cappuccino",
-                      description: "Belli degil neyy",
-                      image: 'assets/images/cappuccino.jpg',
-                      price: '6.00',
-                    ),
-                    ProductItem(
-                      title: "Espresso",
-                      description: "Belli degil neyy",
-                      image: 'assets/images/espresso.jpg',
-                      price: '8.00',
-                    ),
-                    ProductItem(
-                      title: "Milk",
-                      description: "Belli degil neyy",
-                      image: 'assets/images/milk.jpg',
-                      price: '2.00',
-                    ),
-                  ],
+                  children: buildList(),
                 )
               ),
             ),
