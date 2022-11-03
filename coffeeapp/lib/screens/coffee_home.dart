@@ -41,7 +41,7 @@ class _CoffeeHomeScreenState extends State<CoffeeHomeScreen> {
             padding: const EdgeInsets.all(12.0),
             child: Text(
               'Find the best coffee for you',
-              style: TextStyle(
+              style:TextStyle(
                 fontSize: 36,
                 fontWeight: FontWeight.bold,
                 // fontFamily: 
@@ -52,25 +52,8 @@ class _CoffeeHomeScreenState extends State<CoffeeHomeScreen> {
           SizedBox(height: 25,),
 
           // Search Area
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 18.0),
-            child: TextField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search,),
-                hintText: "Find your coffee..",
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.orange.shade700,
-                  ),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.grey.shade700,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          MyInputBox(),
+          MyInputBox(),
           
           // Categories
           Container(
@@ -145,6 +128,35 @@ class _CoffeeHomeScreenState extends State<CoffeeHomeScreen> {
           ),
         ]
       ),    
+    );
+  }
+}
+
+class MyInputBox extends StatelessWidget {
+  const MyInputBox({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 18.0),
+      child: TextField(
+        decoration: InputDecoration(
+          prefixIcon: Icon(Icons.search,),
+          hintText: "Find your coffee..",
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.orange.shade700,
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.grey.shade700,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -15,6 +15,70 @@ class FoodScreen extends StatefulWidget {
 }
 
 class _FoodScreenState extends State<FoodScreen> {
+
+  List<String> categories = [
+    'Burger', 'Sandwich', 'Pasta', 'Salad', 'Drink', '...'
+  ];
+
+  List< Map<String, String> > products = [
+    {
+      'title': 'Chicken Fries', 
+      'description': 'Large, Standard', 
+      'imagePath': 'assets/images/food1.png', 
+      'price': '89.00',
+    },
+    {
+      'title': 'Black Steak', 
+      'description': 'Large, Standard', 
+      'imagePath': 'assets/images/food2.png', 
+      'price': '498.00',
+    },
+    {
+      'title': 'Big Biff', 
+      'description': 'Large, Standard', 
+      'imagePath': 'assets/images/food3.png', 
+      'price': '219.00',
+    },
+    {
+      'title': 'Chicken Fries', 
+      'description': 'Large, Standard', 
+      'imagePath': 'assets/images/food1.png', 
+      'price': '89.00',
+    },
+    {
+      'title': 'Black Steak', 
+      'description': 'Large, Standard', 
+      'imagePath': 'assets/images/food2.png', 
+      'price': '498.00',
+    },
+    {
+      'title': 'Big Biff', 
+      'description': 'Large, Standard', 
+      'imagePath': 'assets/images/food3.png', 
+      'price': '219.00',
+    },
+  ];
+
+  List<Widget> parseProducts() {
+    return products.map((e) {
+      return ProductBox(
+        title: e['title']!, 
+        description: e['description']!, 
+        imagePath: e['imagePath']!, 
+        price: e['price']!,
+      );
+    }).toList();
+  }
+
+  List<Widget> parseCategories() { 
+    return categories.map((e) {
+      return CategoryItem(
+          title: e,
+          // isSelected: false,
+        );
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,33 +137,7 @@ class _FoodScreenState extends State<FoodScreen> {
             child: Expanded(
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: [
-                  CategoryItem(
-                    title: 'Burger',
-                    isSelected: true,
-                  ),
-                  CategoryItem(
-                    title: 'Sandwich',
-                    isSelected: false,
-                  ),
-                  CategoryItem(
-                    title: 'Pasta',
-                    isSelected: false,
-                  ),
-                  CategoryItem(
-                    title: 'Salad',
-                    isSelected: false,
-                  ),
-                  CategoryItem(
-                    title: 'Drink',
-                    isSelected: false,
-                  ),
-                  CategoryItem(
-                    title: 'Soup',
-                    isSelected: false,
-                  ),
-                  
-                ],
+                children: parseCategories(),
               ),
             ),
           ),
@@ -114,26 +152,7 @@ class _FoodScreenState extends State<FoodScreen> {
             child: Expanded(
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: [
-                  ProductBox(
-                    title: 'Chicken Fries', 
-                    description: 'Large, Standard', 
-                    imagePath: 'assets/images/food1.png', 
-                    price: '89.00',
-                  ),
-                  ProductBox(
-                    title: 'Black Steak', 
-                    description: 'Large, Standard', 
-                    imagePath: 'assets/images/food2.png', 
-                    price: '498.00',
-                  ),
-                  ProductBox(
-                    title: 'Big Biff', 
-                    description: 'Large, Standard', 
-                    imagePath: 'assets/images/food3.png', 
-                    price: '219.00',
-                  ),
-                ],
+                children: parseProducts(),
               ),
             ),
 
