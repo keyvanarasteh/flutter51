@@ -1,2 +1,0 @@
-#Götür APP
-# Ödev 
