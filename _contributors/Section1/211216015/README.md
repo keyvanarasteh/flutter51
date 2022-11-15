@@ -4,9 +4,9 @@
 
 - lsmovies :  Film inceleme uygulaması
 
-![./1_splash.png](splashsayfasi)  
-![./2_details_page.png](splashsayfasi)  
-![./3_movie_detail.png](splashsayfasi)  
+![./1_splash.png](./1_splash.png)  
+![./2_details_page.png](/2_details_page.png)  
+![./3_movie_detail.png](./3_movie_detail.png)  
 
 ## Getting Started
 
