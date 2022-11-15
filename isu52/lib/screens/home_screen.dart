@@ -66,13 +66,30 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Column(
             children: [
-              Text('Hello'),
+              Text('Hello',
+                style: Theme.of(context).textTheme.headline1,
+              ),
               SizedBox(height: 10,),
-              Text('World'),
+              Text('World',
+                style: Theme.of(context).textTheme.headline2,
+              ),
               SizedBox(height: 20,),
               Text('Hi'),
               SizedBox(height: 30,),
               Text('Guys'),
+              SizedBox(height: 30,),
+              ElevatedButton(onPressed: () { 
+                Navigator.of(context).pushNamed('/profile');
+              }, child: Text('Profile'),),
+              SizedBox(height: 30,),
+              ElevatedButton(onPressed: () { 
+                Navigator.of(context).pushNamed('/foods');
+              }, child: Text('Foods'),),
+              SizedBox(height: 30,),
+              ElevatedButton(onPressed: () { 
+                Navigator.of(context).pushNamed('/tab');
+              }, child: Text('Tab'),),
+              SizedBox(height: 30,),
             ],
           ),
         ]

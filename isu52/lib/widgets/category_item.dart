@@ -8,9 +8,11 @@ class CategoryItem extends StatelessWidget {
   final bool isSelected;
 
 
-  const CategoryItem({
-    Key? key, required this.title, required this.isSelected,
-  }) : super(key: key);
+  const CategoryItem(
+    {
+    Key? key, required this.title, this.isSelected = false,
+    }
+  ) : super(key: key);
 
 
   //    
