@@ -1,9 +1,0 @@
-version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
-options: "0ffaaf3964313a80a19b46c45b8757096110a7474dc16a34fced514a9ab0f2d4"
-build_start_time: [1668699037, 354634046]
-build_end_time: [1668699037, 529096126]
-inputs:
-  ? "/Users/dr.void/Documents/flutter51/_contributors/Section52/212016715/Go\u0308tu\u0308r_APP_V1/macos/Flutter/GeneratedPluginRegistrant.swift"
-  : !private [1668698919, 531685113]
-  "/Users/dr.void/Documents/flutter51/_contributors/Section52/212016715/Go\u0308tu\u0308r_APP_V1/macos/Runner/AppDelegate.swift": !private [1668698661, 805891513]
-  "/Users/dr.void/Documents/flutter51/_contributors/Section52/212016715/Go\u0308tu\u0308r_APP_V1/macos/Runner/MainFlutterWindow.swift": !private [1668698661, 813849925]

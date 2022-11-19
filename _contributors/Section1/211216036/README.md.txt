@@ -1,3 +1,0 @@
-Harun ÇELİK - 211216036
-
-Ahmet BAYRAM -211216045

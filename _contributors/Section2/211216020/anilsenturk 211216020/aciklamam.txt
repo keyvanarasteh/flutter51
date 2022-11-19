@@ -1,1 +1,0 @@
-Takıldığım kısım page1 de telefon emulatoru ile baklınca sağ ve aşağı doğru taşma olması SingleChildScrollView kullanmaya çalısam da bir türlü çözemedim.
